@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:Contraseña1234@localhost:3306/neon_store"
+}
+
+model neon_products {
+  IdProduct           Int     @id @default(autoincrement())
+  Product_name        String?
+  Price               Float
+  Product_description String
+  IMAGE               String
+}
